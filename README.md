@@ -1,2 +1,2 @@
-# talk2me
+# talK
 a language structure for shopping forms 
