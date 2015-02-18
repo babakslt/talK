@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+.hide{display: none;}
+.show{display: block;}
+.mgcenter { margin: 0 auto;}
+
+.q {
+    padding: 1rem;
+    text-align: center;
+}
+.wizard {
+    color: #fff;
+    position: relative;
+		background-color:crimson;
+}
+i,b {
+    text-decoration: none;
+    font-weight: 100;
+    font-style: normal;
+    overflow: hidden;
+}
+.statement {
+    padding: 2rem;
+    padding-top: 15vh;
+    box-shadow: inset 0 2px 0 0 rgba(255,255,255,0.2);
+    background: crimson;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin-top: -1.1rem;
+}
+
+.a {
+    text-align: center;
+    font-size: 1.5rem;
+}
+select.drop {
+    background-color: crimson;
+    color: #fff;
+    font-size: 1.4rem;
+    border: 2px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+select.drop::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    display: block;
+    background: #fff;
+}
+
+.statement.completed{
+    background-color: cornflowerblue;
+    padding: 1rem;
+    width: auto;
+    display: inline-block;
+    height: 4rem;
+    box-shadow: inset -5px 0 0 0 rgba(255,255,255,0.2);
+    margin-bottom: -3.1rem;
+    z-index: 10;
+    position: relative;
+}
+    .statement.completed .a {
+        text-align: left;
+        font-size: 1rem;
+        float: left;
+    }
+        .statement.completed .a > i { width: 10px; text-indent: 100%; float: left;position: relative;}
+        .statement.completed .a > i:not(:last-child)::after {
+            content: ">";
+            text-indent: 0;
+            left: 0;
+            position: absolute;
+        }
+
+    .statement.completed .q { display: none}
+
+    .statement.completed select.drop {
+        background-color: cornflowerblue;
+        font-size: 1rem;
+        float: left;
+    }
+
+.btn.submit {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border:10px solid rgba(255,255,255,0.3);
+    background-color: limegreen;
+    margin-top: 4rem;
+    position: relative;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+    .btn.submit:hover {
+        box-shadow: inset 0 0 0 40px rgba(255,255,255,0.05),inset 0 0 0 30px rgba(255,255,255,0.05),inset 0 0 0 20px rgba(255,255,255,0.05),inset 0 0 0 10px rgba(255,255,255,0.05);
+    }
+    .btn.submit::after{
+        content: "Right";
+
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 100%;
+        padding-top: 3rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+}
+
+.tr {
+    width: 100%;
+    display: block;
+}
+		.tr:hover {
+				background-color: rgba(0,0,0,0.15);
+				box-shadow: inset 0 0 0 10px rgba(0,0,0,0.01);
+		}
+.td {
+    display: inline-block;
+    margin: 1rem;
+    text-align: center;
+    width: 40%;
+}
